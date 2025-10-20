@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+:root {
+  --font-system: 'Pretendard', "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --text: #8a8a8a;
+  --line: #dddddd;
+  --bg: #DEE4F0;
+
+  /* color */
+  --black: #000000;
+  --white: #ffffff;
+  --cyan30: #00C3CC;
+  --blue30: #1C89E9;
+  --green30: #00BD52;
+  --yellow30: #FFB300;
+  --red30: #F2473D;
+  --pink30: #F81AE9;
+  --navy30: #00337B;
+
+  --gray99: #F7F7F8;
+  --gray90: #F7FBFB;
+  --gray80: #F2F6F6;
+  --gray70: #E9EDED;
+  --gray60: #DEE2E2;
+  --gray50: #BCC0C0;
+  --gray40: #9DA1A1;
+  --gray30: #747777;
+  --gray20: #606363;
+  --gray10: #414444;
+  --gray5: #202323;
+
+  /* sizing */
+  --basicSize: 4px;
+
+  /* border-radius */
+  --brS: 6px;
+  --brR: 99px;
+  --brM: 8px;
+  --brL: 12px;
+}

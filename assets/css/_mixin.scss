@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+@mixin font($size, $weight, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+@mixin flex($justify, $align, $gap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin flexColumn($align, $gap) {
+    display: flex;
+    flex-direction: column;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin border($color, $radius) {
+    border-width: 1px;
+    border-style: solid;
+    border-color: $color;    
+    border-radius: $radius;
+}
