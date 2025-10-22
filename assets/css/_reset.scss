@@ -201,6 +201,12 @@ legend {
   line-height: 0;
   overflow: hidden;
 }
+input, textarea{opacity:1;-webkit-text-fill-color:inherit;}
+input, textarea, select{margin:0;padding:0;font-family:inherit;font-size:16px;font-weight:400;color:var(--gray5);;box-sizing:border-box;-webkit-box-sizing:border-box;line-height:normal;-webkit-appearance:none;appearance:none;outline:none;}
+textarea, select{outline:none;}
+select::-ms-expand{display:none;}
+select:disabled{pointer-events:none;}
+
 
 input,
 textarea {
