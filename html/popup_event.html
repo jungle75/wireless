@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>한국도로교통공단</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>한국도로교통공단</title>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
   <link rel="stylesheet" href="/assets/css/style.css" />
+  
 
   <script src="/assets/js/jquery-3.7.0.min.js"></script>
   <script src="/assets/js/jquery-ui.min.js"></script>
@@ -13,93 +15,113 @@
 <body>
 
   <div class="Popup-contents">
-    <h1 class="h1">신호센터 정보</h1>
+    <h1 class="h1">장애이력 조회</h1>
+
+    <div class="formArea searchBox">
+      <div class="formItem">
+        <label class="label required">지역명</label>
+        <div class="form">
+          <div class="selectBox" style="width: 120px;">
+            <select id="" name="">
+              <option value="0">선택하세요</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="formItem flex-1">
+        <label class="label required">교차로명</label>
+        <div class="form">
+          <div class="selectBox" style="width: 100%;">
+            <select id="" name="">
+              <option value="0">선택하세요</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="formItem">
+        <label class="label">검색기간</label>
+        <div class="form">
+          <div class="inpBox datePicker">
+            <input type="text" id="datepicker">
+          </div>
+          <span>~</span>
+          <div class="inpBox datePicker">
+            <input type="text" id="datepicker">
+          </div>
+        </div>
+      </div>
+      <span class="searchBtn"><button class="btn medium primary"><i class="ic ic_search_W"></i>검색</button></span>
+    </div>
 
     <!-- gridArea -->
-    <div class="gridArea">
+    <div class="total"><span>93</span></div>
+    <div class="gridArea" style="height: 360px;">
       <table class="tableBody">
         <caption>테이블 내용 요약</caption>
         <thead>
           <tr>
-            <th>지역코드</th>
-            <th>지역센터</th>
-            <th>아이디</th>
-            <th>비밀번호</th>
-            <th>지역센터ID</th>
-            <th>파일 수정일자</th>
-            <th>시뮬레이터</th>
-            <th>X좌표</th>
-            <th>Y좌표</th>
-            <th>변경</th>
+            <th>지역명</th>
+            <th>교차로명</th>
+            <th>이벤트 발생시각</th>
+            <th>상태</th>
+            <th>서버 ID</th>
           </tr>
         </thead>
         <!--//tableHead end -->
         <tbody>
           <tr>
-            <td><span>L01</span></td>
-            <td><span>서울시</span></td>
-            <td><span>SIGUSER</span></td>
-            <td><span>SIGUSER</span></td>
-            <td><span>7601</span></td>
-            <td><span>18/12/05 16:28:16</span></td>
-            <td><span>OFF</span></td>
-            <td><span>127042986</span></td>
-            <td><span>37482006</span></td>
-            <td><button class="btn small block line">변경</button></td>
+            <td><span>[15701966600] 구지창동교차료</span></td>
+            <td><span>[L29] 대구시</span></td>
+            <td><span>2025-08-20 16:06</span></td>
+            <td><span>[1]ONLINE</span></td>
+            <td><span>0</span></td>
           </tr>
           <tr>
-            <td><span>L01</span></td>
-            <td><span>서울시</span></td>
-            <td><span>SIGUSER</span></td>
-            <td><span>SIGUSER</span></td>
-            <td><span>7601</span></td>
-            <td><span>18/12/05 16:28:16</span></td>
-            <td><span>OFF</span></td>
-            <td><span>127042986</span></td>
-            <td><span>37482006</span></td>
-            <td><button class="btn small block line">변경</button></td>
+            <td><span>[15701966600] 구지창동교차료</span></td>
+            <td><span>[L29] 대구시</span></td>
+            <td><span>2025-08-20 16:06</span></td>
+            <td><span>[1]ONLINE</span></td>
+            <td><span>0</span></td>
           </tr>
           <tr>
-            <td><span>L01</span></td>
-            <td><span>서울시</span></td>
-            <td><span>SIGUSER</span></td>
-            <td><span>SIGUSER</span></td>
-            <td><span>7601</span></td>
-            <td><span>18/12/05 16:28:16</span></td>
-            <td><span>OFF</span></td>
-            <td><span>127042986</span></td>
-            <td><span>37482006</span></td>
-            <td><button class="btn small block line">변경</button></td>
+            <td><span>[15701966600] 구지창동교차료</span></td>
+            <td><span>[L29] 대구시</span></td>
+            <td><span>2025-08-20 16:06</span></td>
+            <td><span>[1]ONLINE</span></td>
+            <td><span>0</span></td>
           </tr>
           <tr>
-            <td><span>L01</span></td>
-            <td><span>서울시</span></td>
-            <td><span>SIGUSER</span></td>
-            <td><span>SIGUSER</span></td>
-            <td><span>7601</span></td>
-            <td><span>18/12/05 16:28:16</span></td>
-            <td><span>OFF</span></td>
-            <td><span>127042986</span></td>
-            <td><span>37482006</span></td>
-            <td><button class="btn small block line">변경</button></td>
+            <td><span>[15701966600] 구지창동교차료</span></td>
+            <td><span>[L29] 대구시</span></td>
+            <td><span>2025-08-20 16:06</span></td>
+            <td><span>[1]ONLINE</span></td>
+            <td><span>0</span></td>
           </tr>
           <tr>
-            <td><span>L01</span></td>
-            <td><span>서울시</span></td>
-            <td><span>SIGUSER</span></td>
-            <td><span>SIGUSER</span></td>
-            <td><span>7601</span></td>
-            <td><span>18/12/05 16:28:16</span></td>
-            <td><span>OFF</span></td>
-            <td><span>127042986</span></td>
-            <td><span>37482006</span></td>
-            <td><button class="btn small block line">변경</button></td>
+            <td><span>[15701966600] 구지창동교차료</span></td>
+            <td><span>[L29] 대구시</span></td>
+            <td><span>2025-08-20 16:06</span></td>
+            <td><span>[1]ONLINE</span></td>
+            <td><span>0</span></td>
+          </tr>
+          <tr>
+            <td><span>[15701966600] 구지창동교차료</span></td>
+            <td><span>[L29] 대구시</span></td>
+            <td><span>2025-08-20 16:06</span></td>
+            <td><span>[1]ONLINE</span></td>
+            <td><span>0</span></td>
+          </tr>
+          <tr>
+            <td><span>[15701966600] 구지창동교차료</span></td>
+            <td><span>[L29] 대구시</span></td>
+            <td><span>2025-08-20 16:06</span></td>
+            <td><span>[1]ONLINE</span></td>
+            <td><span>0</span></td>
           </tr>
         </tbody>
       </table>
     </div>
     <!--//gridArea end -->
   </div>
-  
 </body>
 </html>

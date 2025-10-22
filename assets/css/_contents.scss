@@ -1,2 +1,189 @@
 @charset "utf-8";
 @use '_mixin';
+
+.h3 {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--navy30);
+
+  &::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 10px;
+    border: 3px solid var(--navy30);
+    border-radius: 50%;
+  }
+}
+
+.formArea {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  column-gap: 24px;
+  padding: 16px;
+
+  .formItem {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    &.flex-1 {
+      flex: 1;
+    }
+
+    .label {
+      display: flex;
+      gap: 2px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 15px;
+      color: var(--gray10);
+      white-space: nowrap;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 4px;
+        height: 4px;
+        border-radius: 4px;
+        background: transparent;
+        margin-top: 2px;
+      }
+    }
+
+    .required {
+      &::after {
+        background: var(--red40);
+      }
+    }
+
+    .form {
+      flex: 1 1 0%;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      .flex-1 {
+        flex: 1 1 0%;
+      }
+    }
+
+    .form+.label {
+      margin-left: 16px;
+    }
+  }
+
+  &.searchBox {
+    position: relative;
+    background-color: var(--bg);
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: var(--gray40);
+
+  &::before {
+    content: "Total :";
+  }
+
+  span {
+    color: var(--black);
+    font-weight: 600;
+  }
+
+  &:has(.selectBox) {
+    justify-content: flex-end;
+
+    &::before {
+      content: "앱번호 :";
+    }
+  }
+}
+
+.tabMenu {
+  display: flex;
+  gap: 4px;
+  width: 100%;
+  height: 46px;
+  padding: 4px;
+  background-color: var(--gray70);
+  border-radius: 6px;
+  margin-bottom: 16px;
+
+  button {
+    flex: 1;
+    border-radius: 6px;
+    color: var(--gray10);
+    cursor: pointer;
+
+    &.act {
+      background-color: var(--green30);
+
+      span {
+        font-weight: 600;
+        color: white;
+      }
+    }
+  }
+}
+
+.tabContainer {
+  .comment {
+    font-size: 14px;
+    color: var(--red30);
+    margin-bottom: 8px;
+
+    &::before {
+      content: "※";
+      margin-right: 4px;
+    }
+  }
+}
+
+.inputForm {
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  overflow: hidden;
+
+  table {
+    width: 100%;
+
+    th,
+    td {
+      font-size: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    th {
+      padding: 6px 16px;
+      text-align: left;
+      color: var(--gray320);
+      font-weight: 500;
+      background-color: var(--gray80);
+    }
+
+    td {
+      padding: 6px;
+      color: var(--gray40);
+    }
+
+    tr:last-child {
+
+      th,
+      td {
+        border: 0;
+      }
+    }
+  }
+}

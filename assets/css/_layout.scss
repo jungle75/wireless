@@ -66,12 +66,6 @@
         color: var(--navy30);
       }
     }
-
-    .act,
-    a:hover {
-      font-weight: 700;
-      color: var(--gray5);
-    }
   }
 }
 
@@ -100,7 +94,6 @@
       display: flex;
 
       li {
-        flex: 1;
         height: 36px;
         display: flex;
         justify-content: center;
@@ -110,7 +103,7 @@
 
         &:hover,
         &.active {
-          border-bottom: 3px solid var(--navy30);
+          border-bottom: 4px solid var(--navy30);
 
           span {
             color: var(--navy30);
@@ -118,9 +111,17 @@
         }
 
         span {
-          font-size: 13px;
+          font-size: 16px;
           font-weight: 600;
           color: var(--gray20);
+        }
+
+        &:first-child {
+          width: 120px;
+        }
+
+        &:last-child {
+          width: 170px;
         }
       }
 
@@ -196,6 +197,23 @@
             width: 16px;
             height: 16px;
           }
+        }
+      }
+
+      .formArea {
+        flex-direction: column;
+        padding: 0;
+        border: solid var(--gray40);
+        border-width: 1px 0;
+        padding: 8px;
+        margin-bottom: 12px;
+
+        .formItem {
+          gap: 0;
+        }
+
+        .label {
+          font-size: 13px;
         }
       }
     }
@@ -280,6 +298,8 @@
 
           .villageList {
             display: block;
+            background-color: var(--gray80);
+            padding: 8px 0;
 
             li {
               padding: 0 16px 0 32px;

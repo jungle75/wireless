@@ -18,7 +18,7 @@
       <h1 class="logo"><a href="#"><span class="hidden">한국도로교통공단</span></a></h1>
 
       <ul class="nav">
-        <li class="ic ic_log"><span>장애이력</span></li>
+        <li class="ic ic_log" data-url="popup_event.html" data-title="이벤트 이력정보" data-width="1000" data-height="700"><span>장애이력</span></li>
         <li class="ic ic_logout"><span>로그아웃</span></li>
       </ul>
     </header>
@@ -184,7 +184,8 @@
         <div id="tabCont02" class="tabContainer" style="display: none;">
 
           <section class="section_01">
-            <h2>긴급차량우선신호 서비스 현황</h2>
+            <h2>긴급차량우선신호 서비스 현황</h2>           
+
             <!-- gridArea -->
             <div class="gridArea">
               <table class="tableBody">
@@ -217,6 +218,35 @@
           <section class="section_02">
             <h2>긴급차량우선신호 서비스 이력</h2>
             
+            <div class="formArea">
+              <div class="formItem block">
+                <label class="label required">지역센터</label>
+                <div class="form">
+                  <div class="selectBox" style="width: 100%;">
+                    <select id="" name="">
+                      <option value="0">선택하세요</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="formItem block">
+                <label class="label">검색시작</label>
+                <div class="form">
+                  <div class="inpBox datePicker">
+                    <input type="text" id="datepicker">
+                  </div>                  
+                </div>
+              </div>
+              <div class="formItem block">
+                <label class="label">검색종료</label>
+                <div class="form">
+                  <div class="inpBox datePicker">
+                    <input type="text" id="datepicker">
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <!-- gridArea -->
             <div class="gridArea">
               <table class="tableBody">
@@ -527,6 +557,28 @@
     //  '.ic_signals01' 아이콘 클릭 이벤트 핸들러
     $('.signalIcon').on('click', function() {
         $('#modalOpen').toggleClass('open');
+    });
+    
+
+    // 윈도우 팝업
+    function getCenteredOptions(width, height) {
+      const left = (screen.width - width) / 2;
+      const top = (screen.height - height) / 2;
+      return `width=${width},height=${height},left=${left},top=${top},scrollbars=yes,resizable=yes,status=no,toolbar=no,menubar=no`;
+    }
+
+    $('.nav li').on('click', function () {
+      // data-* 속성 값을 숫자로 변환하여 가져옴
+      const url = $(this).data('url');
+      const title = $(this).data('title');
+      const width = $(this).data('width');
+      const height = $(this).data('height');
+
+      const options = getCenteredOptions(width, height);
+
+      if (url && title) {
+        window.open(url, title, options);
+      }
     });
   });
 </script>
