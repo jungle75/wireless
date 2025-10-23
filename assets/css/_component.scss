@@ -150,6 +150,10 @@ h5 {
   height: 34px;
 }
 
+.inpBox.flex-1 {
+  flex: 1;
+}
+
 .inpBox input {
   font-size: 14px;
   line-height: 20px;
@@ -216,7 +220,7 @@ h5 {
 /*달력*/
 .inpBox.datePicker {
   position: relative;
-  width: 120px;
+  width: 130px;
   padding-right: 40px;
 }
 

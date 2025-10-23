@@ -225,6 +225,38 @@ legend {
   overflow: hidden;
 }
 
+input, textarea {
+  opacity: 1;
+  -webkit-text-fill-color: inherit;
+}
+
+input, textarea, select {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--gray5);
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  line-height: normal;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+textarea, select {
+  outline: none;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+select:disabled {
+  pointer-events: none;
+}
+
 input,
 textarea {
   opacity: 1;
@@ -427,6 +459,10 @@ h5 {
   height: 34px;
 }
 
+.inpBox.flex-1 {
+  flex: 1;
+}
+
 .inpBox input {
   font-size: 14px;
   line-height: 20px;
@@ -493,7 +529,7 @@ h5 {
 /*달력*/
 .inpBox.datePicker {
   position: relative;
-  width: 120px;
+  width: 130px;
   padding-right: 40px;
 }
 
@@ -1586,10 +1622,10 @@ a.ui-button:active,
   color: var(--gray20);
 }
 .container .LnbArea .tab li:first-child {
-  width: 120px;
+  width: 100px;
 }
 .container .LnbArea .tab li:last-child {
-  width: 170px;
+  flex: 1;
 }
 .container .LnbArea .tab .ic_logout {
   position: absolute;
