@@ -1187,7 +1187,6 @@ h5 {
 .gridArea,
 .dataTable {
   overflow: auto;
-  border-top: 1px solid #5B7293;
 }
 
 .tableBody {
@@ -1215,6 +1214,7 @@ h5 {
   font-size: 14px;
   color: white;
   white-space: nowrap;
+  border: 1px solid var(--line);
 }
 
 .tableBody tbody {
@@ -1254,6 +1254,16 @@ h5 {
 
 .gridArea .tableBody tbody td {
   padding: 0 8px;
+}
+
+.dataTable .tableBody thead th {
+  background-color: var(--gray80);
+  color: var(--black);
+  border: 1px solid var(--line);
+  font-weight: 400;
+}
+.dataTable .tableBody tbody td {
+  border: 1px solid var(--line);
 }
 
 /* calendar */
@@ -2182,4 +2192,26 @@ a.ui-button:active,
 .inputForm table tr:last-child th,
 .inputForm table tr:last-child td {
   border: 0;
+}
+
+.gridLayout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.gridLayout .dataTable {
+  border: 0;
+}
+.gridLayout .dataTable .light_green {
+  background-color: var(--green30);
+}
+.gridLayout .dataTable .light_green span {
+  color: white;
+}
+.gridLayout .dataTable .light_red {
+  background-color: var(--red30);
+}
+.gridLayout .dataTable .light_red span {
+  color: white;
 }

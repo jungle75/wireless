@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>한국도로교통공단</title>
+  
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  
+
+  <script src="/assets/js/jquery-3.7.0.min.js"></script>
+  <script src="/assets/js/jquery-ui.min.js"></script>
+  <script src="/assets/js/ui.js"></script>
+</head>
+<body>
+
+  <div class="Popup-contents">
+    <div class="gridLayout">
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d101249.80285660844!2d126.92246886549974!3d37.53016918545986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sdaum!5e0!3m2!1sko!2skr!4v1758261819280!5m2!1sko!2skr"
+          width="100%" height="500px" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>      
+
+      <div class="dataTable">
+        <h1 class="h1">[강릉시 KIST 분원 3거리]</h1>
+
+        <table class="tableBody">
+          <colgroup>
+            <col style="width: 10%;">
+            <col style="width: 10%;">
+            <col style="width: 10%;">
+            <col style="width: 10%;">
+            <col style="width: 30%;">
+            <col style="width: 10%;">
+            <col style="width: 10%;">
+            <col style="width: 10%;">
+          </colgroup>
+          <caption>테이블 내용 요약</caption>
+          <thead>
+            <tr>
+              <th colspan="2">방향정보</th>
+              <th colspan="4">출력정보</th>
+              <th colspan="2">기타</th>
+            </tr>
+            <tr>
+              <th>보행자</th>
+              <th>방향코드</th>
+              <th>시간신뢰성</th>
+              <th>출력형태</th>
+              <th>신호등상태</th>
+              <th>비보호</th>
+              <th>잔여시간</th>
+              <th>표출시간</th>
+            </tr>
+          </thead>
+          <!--//tableHead end -->
+          <tbody>
+            <tr>
+              <td><span>0</span></td>
+              <td><span>북동</span></td>
+              <td><span>1</span></td>
+              <td><span>직진(1)</span></td>
+              <td class="light_green"><span>녹색 점등(3)</span></td>
+              <td><span>0</span></td>
+              <td><span>255</span></td>
+              <td><span>255</span></td>
+            </tr>
+            <tr>
+              <td><span>0</span></td>
+              <td><span>북동</span></td>
+              <td><span>1</span></td>
+              <td><span>직진(1)</span></td>
+              <td class="light_red"><span>적색 점등(3)</span></td>
+              <td><span>0</span></td>
+              <td><span>255</span></td>
+              <td><span>255</span></td>
+            </tr>
+            <tr>
+              <td><span>0</span></td>
+              <td><span>북동</span></td>
+              <td><span>1</span></td>
+              <td><span>직진(1)</span></td>
+              <td class="light_green"><span>녹색 점등(3)</span></td>
+              <td><span>0</span></td>
+              <td><span>255</span></td>
+              <td><span>255</span></td>
+            </tr>
+            <tr>
+              <td><span>0</span></td>
+              <td><span>북동</span></td>
+              <td><span>1</span></td>
+              <td><span>직진(1)</span></td>
+              <td class="light_red"><span>적색 점등(3)</span></td>
+              <td><span>0</span></td>
+              <td><span>255</span></td>
+              <td><span>255</span></td>
+            </tr>
+            <tr>
+              <td><span>0</span></td>
+              <td><span>북동</span></td>
+              <td><span>1</span></td>
+              <td><span>직진(1)</span></td>
+              <td class="light_green"><span>녹색 점등(3)</span></td>
+              <td><span>0</span></td>
+              <td><span>255</span></td>
+              <td><span>255</span></td>
+            </tr>
+            <tr>
+              <td><span>0</span></td>
+              <td><span>북동</span></td>
+              <td><span>1</span></td>
+              <td><span>직진(1)</span></td>
+              <td class="light_red"><span>적색 점등(3)</span></td>
+              <td><span>0</span></td>
+              <td><span>255</span></td>
+              <td><span>255</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <!-- gridArea -->
+    <div class="gridArea">
+      <table class="tableBody">
+        <caption>테이블 내용 요약</caption>
+        <thead>
+          <tr>
+            <th>지역센터</th>
+            <th>번호</th>
+            <th>전이</th>
+            <th>감응</th>
+            <th>소등</th>
+            <th>점멸</th>
+            <th>수동</th>
+            <th>SCU</th>
+            <th>센터</th>
+            <th>모순</th>
+            <th>신호주기</th>
+            <th>정보개수</th>
+            <th>교차로시각</th>
+          </tr>
+        </thead>
+        <!--//tableHead end -->
+        <tbody>
+          <tr>
+            <td><span>강릉시</span></td>
+            <td><span>2520244177</span></td>
+            <td><span>OFF</span></td>
+            <td><span>ON</span></td>
+            <td><span>OFF</span></td>
+            <td><span>OFF</span></td>
+            <td><span>OFF</span></td>
+            <td><span>정상</span></td>
+            <td><span>정상</span></td>
+            <td><span>정상</span></td>
+            <td><span>56</span></td>
+            <td><span>6</span></td>
+            <td><span>2025-08-20 16:8:27</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!--//gridArea end -->
+  </div>
+</body>
+</html>

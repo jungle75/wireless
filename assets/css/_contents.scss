@@ -187,3 +187,30 @@
     }
   }
 }
+
+.gridLayout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 16px;
+
+  .dataTable {
+    border: 0;
+
+    .light_green {
+      background-color: var(--green30);
+
+      span {
+        color: white;
+      }
+    }
+
+    .light_red {
+      background-color: var(--red30);
+
+      span {
+        color: white;
+      }
+    }
+  }
+}
