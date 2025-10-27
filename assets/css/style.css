@@ -1244,12 +1244,8 @@ h5 {
   color: var(--gray5);
 }
 
-.tableBody tbody td:first-child {
-  border-width: 1px 1px 1px 0;
-}
-
-.tableBody tbody td:last-child {
-  border-width: 1px 0 1px 1px;
+.gridArea .tableBody thead th {
+  border-width: 0 1px 1px 1px;
 }
 
 .gridArea .tableBody tbody td {
@@ -1525,6 +1521,69 @@ a.ui-button:active,
   padding: 0;
   overflow: hidden;
   border: 0;
+}
+
+/******************************
+  Pagination 정의
+*******************************/
+.pagination {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 24px;
+}
+.pagination a,
+.pagination button {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.pagination .arrowBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.pagination .arrowBtn button {
+  font-size: 0;
+  background-size: 24px;
+  background-repeat: no-repeat;
+}
+.pagination .arrowBtn button:disabled {
+  opacity: 0.3;
+}
+.pagination .arrowBtn .backEnd {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDEwTDEwIDE1TDE1IDIwIiBzdHJva2U9IiMyQTJBMkEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8cGF0aCBkPSJNMTkgMTBMMTQgMTVMMTkgMjAiIHN0cm9rZT0iIzJBMkEyQSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPgo=");
+}
+.pagination .arrowBtn .back {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE3IDEwTDEyIDE1TDE3IDIwIiBzdHJva2U9IiMyQTJBMkEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K");
+}
+.pagination .arrowBtn .nextEnd {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTE1IDIwTDIwIDE1TDE1IDEwIiBzdHJva2U9IiMyQTJBMkEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8cGF0aCBkPSJNMTEgMjBMMTYgMTVMMTEgMTAiIHN0cm9rZT0iIzJBMkEyQSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+Cjwvc3ZnPgo=");
+}
+.pagination .arrowBtn .next {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzAiIGhlaWdodD0iMzAiIHZpZXdCb3g9IjAgMCAzMCAzMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEzIDIwTDE4IDE1TDEzIDEwIiBzdHJva2U9IiMyQTJBMkEiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K");
+}
+.pagination .pageGroup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.pagination .pageGroup a {
+  color: var(--gray10);
+}
+.pagination .pageGroup .act {
+  color: white;
+  background-color: var(--navy30);
+  border-radius: 50%;
+}
+.pagination.center {
+  justify-content: center;
+}
+.pagination.right {
+  justify-content: right;
 }
 
 .wrap {
@@ -1807,6 +1866,8 @@ a.ui-button:active,
   justify-content: center;
   align-items: center;
   background-color: var(--bg);
+  border: solid #B4C0D2;
+  border-width: 1px 1px 1px 0;
 }
 .container .btnFold::before {
   content: "";
